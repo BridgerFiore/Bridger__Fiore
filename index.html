@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridger Fiore | Portfolio</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-left">Bridger Fiore</div>
-        <div class="nav-right">
-            <a href="#welcome">Welcome</a>
+        <div class="nav-left">
+            <img src="images/profile.jpg" class="nav-pfp" alt="Profile Picture">
+            <span class="logo-text">Bridger Fiore</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#hero">Welcome</a>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -26,27 +31,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero" id="welcome">
-        <h1>Hi, I'm Bridger</h1>
-        <p class="subtitle">
-            CS student @ UM · Building games, simulations, and data-driven projects.
-        </p>
+    <section id="hero" class="hero">
+        <h1>Hi, I'm Bridger 👋</h1>
+        <p class="tagline">CS student @ UM · Building games, simulations, and data-driven projects.</p>
 
-        <a href="#projects" class="hero-button">See my projects</a>
+        <a href="#projects" class="btn-primary">See my projects</a>
+    </section>
 
-        <h2 class="skills-title">Skills · Tools · Tech</h2>
-
-        <div class="skills">
-            <span class="tag">Python</span>
-            <span class="tag">Java</span>
-            <span class="tag">GDScript (Godot)</span>
-            <span class="tag">Django</span>
-            <span class="tag">Git/GitHub</span>
-            <span class="tag">NumPy/Matplotlib</span>
-            <span class="tag">IoT · Arduino</span>
-            <span class="tag">Simulation · MuJoCo</span>
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills · Tools · Tech</h2>
+        <div class="skill-tags">
+            <span>Python</span><span>Java</span><span>GDScript (Godot)</span>
+            <span>Django</span><span>Git/GitHub</span><span>NumPy/Matplotlib</span>
+            <span>IoT · Arduino</span><span>Simulation · MuJoCo</span>
         </div>
-    </header>
+    </section>
 
     <!-- About -->
     <section id="about">
@@ -69,28 +69,32 @@
         </ul>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects">
         <h2>Projects</h2>
 
-        <div class="project-card">
-            <h3>Bearfoot Adventures (Godot Game)</h3>
-            <p>2D adventure platformer with animations, collectibles, and NPC AI.</p>
-        </div>
+        <div class="project-grid">
 
-        <div class="project-card">
-            <h3>Procedural Car Game</h3>
-            <p>Top-down driving game with procedural roads, NPC traffic, and police AI.</p>
-        </div>
+            <div class="project-card">
+                <h3>Bearfoot Adventures (Godot Game)</h3>
+                <p>2D platformer with animations, collectibles, and NPC AI.</p>
+            </div>
 
-        <div class="project-card">
-            <h3>Sports Analytics</h3>
-            <p>Data analysis on NFL, NBA, MLB datasets.</p>
-        </div>
+            <div class="project-card">
+                <h3>Procedural Car Game</h3>
+                <p>Top-down driving game with procedural roads, traffic AI, and police chases.</p>
+            </div>
 
-        <div class="project-card">
-            <h3>IoT Device: Tendon Motion Sensor</h3>
-            <p>Ultrasonic device to measure hand motion, built for IoT final project.</p>
+            <div class="project-card">
+                <h3>Sports Analytics</h3>
+                <p>Python-based analysis on NFL, NBA, and MLB datasets.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>IoT Tendon Motion Sensor</h3>
+                <p>High-frequency ultrasonic tendon sensor for IoT final project.</p>
+            </div>
+
         </div>
     </section>
 
@@ -101,9 +105,8 @@
         <p>GitHub: <a href="https://github.com/BridgerFiore">github.com/BridgerFiore</a></p>
     </section>
 
-    <!-- Footer -->
     <footer>
-        © 2025 Bridger Fiore. Built with HTML/CSS on GitHub Pages.
+        © 2025 Bridger Fiore — Built with HTML & CSS
     </footer>
 
 </body>

@@ -1,36 +1,81 @@
-/* Global Base Styles */
+/* ================================ */
+/* Background Image + Translucent Layer */
+/* ================================ */
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #fafafa;
+    background: url("images/background.jpg") center/cover fixed no-repeat;
     color: #333;
-    line-height: 1.7;
+    line-height: 1.6;
+    position: relative;
 }
 
-/* Navigation */
+/* White transparent overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.55);  /* adjust transparency */
+    z-index: -1;
+}
+
+
+/* ================================ */
+/* Navigation Bar */
+/* ================================ */
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
-.navbar a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
+/* Left side: Profile pic + name */
 .nav-left {
-    font-size: 1.2rem;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
+.nav-pfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+/* Navigation links */
+.nav-links a {
+    margin-left: 22px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #0077ff;
+}
+
+
+/* ================================ */
 /* Hero Section */
+/* ================================ */
+
 .hero {
     text-align: center;
     padding: 120px 20px 80px;
@@ -38,80 +83,102 @@ body {
 
 .hero h1 {
     font-size: 3rem;
+    font-weight: 800;
     margin-bottom: 10px;
 }
 
-.subtitle {
+.tagline {
     font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 25px;
+    color: #555;
+    margin-bottom: 30px;
 }
 
-/* Button */
-.hero-button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1rem;
+.btn-primary {
+    padding: 12px 28px;
+    background: white;
     border: 2px solid #333;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     color: #333;
     font-weight: 600;
-    margin-bottom: 40px;
+    transition: 0.25s ease;
 }
 
-/* Skills */
-.skills-title {
-    margin-top: 60px;
-    font-size: 1.6rem;
+.btn-primary:hover {
+    background: #333;
+    color: white;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 20px;
-}
 
-.tag {
-    background: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    border: 1px solid #ddd;
-}
-
+/* ================================ */
 /* Sections */
+/* ================================ */
+
 section {
-    max-width: 800px;
+    max-width: 900px;
     margin: 60px auto;
     padding: 0 20px;
 }
 
 h2 {
     font-size: 2rem;
+    font-weight: 800;
     margin-bottom: 15px;
 }
 
-/* Project Cards */
+
+/* ================================ */
+/* Skills */
+/* ================================ */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tags span {
+    background: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+/* ================================ */
+/* Projects */
+/* ================================ */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
 .project-card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 22px;
+    border-radius: 14px;
     border: 1px solid #eee;
-    margin-bottom: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project-card h3 {
-    margin-top: 0;
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
+
+/* ================================ */
 /* Footer */
+/* ================================ */
+
 footer {
-    margin-top: 80px;
-    padding: 30px;
     text-align: center;
-    color: #777;
-    font-size: 0.9rem;
+    padding: 40px;
+    color: #666;
+    margin-top: 80px;
 }
