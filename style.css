@@ -42,15 +42,17 @@ body::before {
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 }
 
+/* TINY Chrome-style profile picture */
 .nav-pfp {
-    width: 40px;
-    height: 40px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #ddd;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
 }
 
 .logo-text {
